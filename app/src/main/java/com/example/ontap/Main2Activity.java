@@ -2,6 +2,7 @@ package com.example.ontap;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -61,7 +62,8 @@ public class Main2Activity extends AppCompatActivity {
         builder.setPositiveButton("Co", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                Intent returnBtn = new Intent(Main2Activity.this, MainActivity.class);
+                startActivity(returnBtn);
             }
         });
         builder.setNegativeButton("Khong", new DialogInterface.OnClickListener() {
